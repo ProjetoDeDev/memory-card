@@ -19,6 +19,10 @@ class User(AbstractUser):
     about_me = models.TextField('Profile', max_length=500, blank=True)
     profile_pic = models.ImageField('Foto do perfil', upload_to='media', blank=True)
 
+    class Meta:
+        verbose_name = 'Usuário'
+        verbose_name_plural = 'Usuários'
+
 
 class Game(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='Autor')
@@ -34,3 +38,7 @@ class Game(models.Model):
 
     def __str__(self):
         return self.name_game
+
+    class Meta:
+        verbose_name = 'Jogo'
+        verbose_name_plural = 'Jogos'
