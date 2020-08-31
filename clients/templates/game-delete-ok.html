@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+    <h1>Deletar Game</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <h2>Tem certeza que deseja deletar {{ game.name_game}} ?</h2>
+        <button type="submit">Confirmar</button>
+    </form>
+</body>
+</html>

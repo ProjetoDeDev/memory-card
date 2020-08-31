@@ -132,3 +132,5 @@ dmypy.json
 
 myvenv
 media/media
+.DS_Store
+clients/.DS_Store

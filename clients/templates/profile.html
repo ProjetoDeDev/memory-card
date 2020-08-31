@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Profile</h1>
+    <h2>Games Cadastrados</h2>
+    <ul>
+        {% for game in games %}
+            <a href="{% url 'update_game' game.id %}">
+                <li>{{ game.name_game }}</li>
+                <li><a href="{{ game.game_img }}"> <img src="{{ game.game_img.url }}" width="100" height="100"></a></li>
+
+            </a>
+            <br>
+        {% endfor %}
+    </ul>
+    <br><br>
+    <h3><a href="{% url 'register_game' %}">Cadastrar/Atualizar Game</a></h3>
+
+</body>
+</html>
